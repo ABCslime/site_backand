@@ -1,6 +1,7 @@
-import cgitb
-cgitb.enable()
+from flask import Flask
+app = Flask(__name__)
 
-# Print necessary headers.
-print("Content-Type: text/html")
-print()
+
+@app.route("/")
+def hello_world():
+  return "Hello, World!"
